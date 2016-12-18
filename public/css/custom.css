@@ -1,0 +1,78 @@
+body { 
+  font-family: $nb-font-family;
+  background: white;
+}
+.btn{
+  position: relative
+}
+.btn.medium::before{
+    display: block;
+    content: '1';
+    position: absolute;
+    border-radius: 64px;
+    border: 2px solid #FFF;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    background: #D55757;
+    color: #FFF;
+    right: 0px;
+    top: -5px;
+    text-align: center;
+    z-index: 1;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+}
+h1, h2, h3, h4, h5{
+  font-family: $nb-font-family;
+}
+
+.btn-success{
+  background-color: $nb-color-primary;
+  border-color: $nb-color-primary;
+}
+
+#title{
+    background-color: $nb-color-primary;
+    color: white;
+}
+
+#title{
+  background-color: $nb-color-primary;
+  color: white;
+  h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .section {
+    position: relative;
+    padding-top: 5vh;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .section {
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    min-height: 800px;
+    max-height: 1200px;
+    padding: 7vmax;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .section {
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    min-height: 800px;
+    max-height: 1200px;
+    padding: 7vmax;
+  }
+}
