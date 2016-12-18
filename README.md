@@ -1,2 +1,0 @@
-# nicobytes-site
-Personal website
