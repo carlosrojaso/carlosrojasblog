@@ -62,11 +62,10 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+plugins:
+- hexo-generator-cname
 ## Themes: https://hexo.io/themes/
 theme: bootstrap-blog
-
-exclude_generators:
-- index
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -74,5 +73,4 @@ deploy:
   type: git
   repo: https://github.com/carlosrojaso/carlosrojasblog.git
   branch: gh-pages
-
 
