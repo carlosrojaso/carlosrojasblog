@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>The Art of Cross/Hybrid Apps State | Carlos Rojas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="As I write this article, I’ve been looking at an interesting technology called React Native.
+
+
+If you are following me in Youtube or in Github you know I develop in Ionic Framework and, apart from hav">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Art of Cross/Hybrid Apps State">
+<meta property="og:url" content="http://www.carlosrojasblog.com/2016/10/15/2016-10-15-art-of-cross-hybrid-apps/index.html">
+<meta property="og:site_name" content="Carlos Rojas">
+<meta property="og:description" content="As I write this article, I’ve been looking at an interesting technology called React Native.
+
+
+If you are following me in Youtube or in Github you know I develop in Ionic Framework and, apart from hav">
+<meta property="og:image" content="http://i.giphy.com/IUp9WRHyCwUEg.gif">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*Pq2S2TRqVpSnurkKnhKbZw.png">
+<meta property="og:updated_time" content="2017-01-06T01:05:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Art of Cross/Hybrid Apps State">
+<meta name="twitter:description" content="As I write this article, I’ve been looking at an interesting technology called React Native.
+
+
+If you are following me in Youtube or in Github you know I develop in Ionic Framework and, apart from hav">
+<meta name="twitter:image" content="http://i.giphy.com/IUp9WRHyCwUEg.gif">
+<meta name="twitter:creator" content="@carlosrojas_o">
+  
+    <link rel="alternate" href="/atom.xml" title="Carlos Rojas" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-5126579-6', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/index.html">Blog</a></li>
+        
+          <li><a class=""
+                 href="http://startups.carlosrojasblog.com/">Issue</a></li>
+        
+          <li><a class=""
+                 href="/Services/index.html">Services</a></li>
+        
+          <li><a class=""
+                 href="/Speaking/index.html">Speaking</a></li>
+        
+          <li><a class=""
+                 href="/Training/index.html">Training</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Carlos Rojas</h1>
+  
+    <p class="lead blog-description">Digital Nomad + Google Product Strategy Expert</p>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-12 blog-main">
+          <article id="post-2016-10-15-art-of-cross-hybrid-apps" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      The Art of Cross/Hybrid Apps State
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/10/15/2016-10-15-art-of-cross-hybrid-apps/" class="article-date"><time datetime="2016-10-15T05:00:00.000Z" itemprop="datePublished">2016-10-15</time></a>
+</div>
+
+    
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hybrid/">Hybrid</a>
+  </div>
+
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>As I write this article, I’ve been looking at an interesting technology called <a href="https://facebook.github.io/react-native/" target="_blank" rel="external">React Native</a>.</p>
+<div align="center"><img src="http://i.giphy.com/IUp9WRHyCwUEg.gif" class="img-responsive"></div>
+
+<p>If you are following me in <a href="https://www.youtube.com/carlosrojas84" target="_blank" rel="external">Youtube</a> or in <a href="https://github.com/carlosrojaso" target="_blank" rel="external">Github</a> you know I develop in Ionic Framework and, apart from having good Starters in the Market. Still, it is good to understand new technologies that are gaining strength among the communities.</p>
+<p>First of all, it is important to understand the range of technologies nowadays. In this graphic I’ve placed three classifications and some technologies that seem to be mentioned frequently in each platform.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*Pq2S2TRqVpSnurkKnhKbZw.png" class="img-responsive"></p>
+<p><br><br><em>Are you enjoying this Post?</em></p>
+<p><em>Enroll in our FREE 5 lesson course that will help take your understand Ionic 2 and Ionic Cloud.</em></p>
+<p><form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post"></form></p>
+<p><input name="seller_id" type="hidden" value="8823315497069"></p>
+<p><input name="email" placeholder="Your email address" type="email"></p>
+<p><button data-custom-highlight-color="" type="submit">Subscribe</button><br></p>
+<h2>Hybrid Apps</h2> 
+
+<p>These are constructed in top of Apache Cordova and basically they allow you to develop an app using HTML + CSS + JS surrounded by a Webview (specifying the Android or IOS SDK) which gives you access to the native characteristics of the device and allow you to extend the functionality through plugins (small pieces of Java or Swift code — Objective C). This classification is much more complete in <a href="http://ionicframework.com/" target="_blank" rel="external">Ionic Framework</a>.</p>
+<h2>Cross Platform App</h2> 
+
+<p>The Apps created through these technologies are native (They don’t only include a Webview). Its principal characteristic is that they are written in Javascript and they use a compiler to convert them into Native components. It is considered that <a href="https://facebook.github.io/react-native/" target="_blank" rel="external">React Native</a> and <a href="https://www.nativescript.org/" target="_blank" rel="external">NativeScript</a> are the most important parts of this technology.</p>
+<h2>Native Apps</h2> 
+
+<p>These are constructed using programming language supported by the official SDK of the device. It is necessary to develop an independent project for each platform and its SDK’s are very complete. The languages to be used are Objective-C or Swift for IOS and Java for Android.</p>
+<p>Well, basically this is the summary about the world of mobile development. To select among these is not easy but you can use these criteria as well as available time for the development and budget.</p>
+<p>Keep coding…</p>
+<p>Carlos Rojas<br>@carlosrojas_o</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://www.carlosrojasblog.com/2016/10/15/2016-10-15-art-of-cross-hybrid-apps/" data-id="cixm1v2gu000141v8ctbfp57k" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hybrid/">Hybrid</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2017 {} Carlos Rojas<br>
+    </div>
+  </div>
+</footer>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
