@@ -2,25 +2,29 @@
 title: Training
 date: 2016-12-20 18:01:10
 ---
-<h1>Angular 2 Fundamentals</h1>
-<p>Coming soon... Feb 2017</p>
-<h1>Bootcamp Ionic 2</h1>
-<p>Coming soon... Mar 2017</p>
-<h1>Learn to make MVPs and Lean Workflows</h1>
-<p>Coming soon... Apr 2017</p>
-<h1>Angular 2 Fundamentals</h1>
-<p>Coming soon... May 2017</p>
-<h1>Bootcamp Ionic 2</h1>
-<p>Coming soon... Jun 2017</p>
-<h1>Learn to make MVPs and Lean Workflows</h1>
-<p>Coming soon... Jul 2017</p>
-<h1>Angular 2 Fundamentals</h1>
-<p>Coming soon... Aug 2017</p>
-<h1>Bootcamp Ionic 2</h1>
-<p>Coming soon... Sep 2017</p>
-<h1>Learn to make MVPs and Lean Workflows</h1>
-<p>Coming soon... Oct 2017</p>
-<h1>Angular 2 Fundamentals</h1>
-<p>Coming soon... Nov 2017</p>
-<h1>Bootcamp Ionic 2</h1>
-<p>Coming soon... Dec 2017</p>
+<!-- Desarrollo de Productos -->
+<img src="https://firebasestorage.googleapis.com/v0/b/modular-source-808.appspot.com/o/page%2F4-tips-on-how-to-build-a-business-not-just-an-app-1920x800.png?alt=media&token=5173543f-1d4f-4146-b07f-331d35b93fdd" class="img-thumbnail"/>
+<p><div class="article-date"><b>Inicio:</b> Feb 02 de 2017 - <b>Fin:</b> Feb 28 de 2017</div>
+<a class="btn btn-primary btn-lg" href="https://www.crowdcast.io/e/5xumzpvi" target="_blank"><span class="glyphicon glyphicon-tag"></span> Reservar mi lugar</a>
+
+Vamos a aprender a crear un flujo de trabajo profesional para trabajar en equipo y crear esquemas de validaciones sencillos que pueden ahorrarnos cantidades inimaginables de dinero debido hipotesis que no encuentran un mercado y por lo tanto mueren.
+<h3 class="well well-sm">Que aprenderas ?</h3><ul class="list-group"><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a usar Slack + Trello + Git</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a materializar tus ideas.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a prototipar tus ideas.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a validar un mercado.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a medir a tu equipo y usuarios.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a iterar con la información recolectada.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a crear un blog rapidamente para validar.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a enviar apps a la tienda para validar con Ionic.</li></ul><a class="btn btn-primary btn-lg" href="https://www.crowdcast.io/e/5xumzpvi" target="_blank"><span class="glyphicon glyphicon-tag"></span> Reservar mi lugar</a>
+</p>
+<!-- Bootcamp Angular 2 -->
+<img src="https://firebasestorage.googleapis.com/v0/b/modular-source-808.appspot.com/o/page%2Fangular2.png?alt=media&token=912898a4-7b8d-4d1b-8b4d-a5b1d17144d9" class="img-thumbnail"/>
+<p><div class="article-date"><b>Inicio:</b> Mar 02 de 2017 - <b>Fin:</b> Mar 30 de 2017</div>
+<a class="btn btn-primary btn-lg" href="https://www.crowdcast.io/e/5xumzpvi" target="_blank"><span class="glyphicon glyphicon-tag"></span> Reservar mi lugar</a>
+
+Angular 2 es la nueva entrega de este increíble Framework para aplicaciones WEB que ahora se ha transformado en una plataforma con la cual puedes hacer aplicaciones WEB y Móviles.
+
+Angular 2 difiere mucho de Angular 1 debido a que ha sido pensado para utilizar las grandes ventajas que otorga ECMAscript 6 y es por esto que vamos a tener que pensar en una buena estrategia para nuestras aplicaciones legadas. Ionic 2 esta construida sobre Angular 2 esto quiere decir que si queremos aprovechar las ventajas de usar Ionic 2 debemos aprender características de Angular 2.<h3 class="well well-sm">Que aprenderas ?</h3><ul class="list-group"><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre Componentes.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre Plantillas, Interpolación y Directivas.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre Data Bindings y Pipes.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas aún mas sobre componentes.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Construiras componentes anidados.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre Servicios e inyección de dependencias.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a obtener Data usando HTTP.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre Navegación y Enrutamiento.</li></ul><a class="btn btn-primary btn-lg" href="https://www.crowdcast.io/e/5xumzpvi" target="_blank"><span class="glyphicon glyphicon-tag"></span> Reservar mi lugar</a>
+</p>
+<!-- Bootcamp Ionic 2 -->
+<img src="https://firebasestorage.googleapis.com/v0/b/modular-source-808.appspot.com/o/page%2Fionic2.png?alt=media&token=bd722538-1efd-4741-96e6-12d52fb89492" class="img-thumbnail"/>
+<p><div class="article-date"><b>Inicio:</b> Abr 04 de 2017 - <b>Fin:</b> Abr 27 de 2017</div>
+<a class="btn btn-primary btn-lg" href="https://www.crowdcast.io/e/5xumzpvi" target="_blank"><span class="glyphicon glyphicon-tag"></span> Reservar mi lugar</a>
+
+Ionic es el framework que sin duda ha revolucionado el mundo de las aplicaciones híbridas y ahora nos presenta su versión 2, basado en todo el poder de ES6, Angular2 y Typescript. En el curso veremos cómo desarrollar apps para múltiples plataformas Android, IOS, Windows y más, teniendo la misma base de código, esto gracias al todo el SDK que nos provee ionic. 
+A lo largo del curso veremos sus principales características, componentes, conexiones a REST y acceso a componentes nativos como Cámara, Acelerómetro, Geolocalización, etc. Hasta llegar al proceso de distribuir la aplicación en tiendas como en Google Play o App Store.
+<h3 class="well well-sm">Que aprenderas ?</h3><ul class="list-group"><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas los Fundamentos básicos.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Entenderas ionic.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre su sistema de navegación.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas sobre la UI/UX con Ionic.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a manipular datos.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a utilizar Ionic Native.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Clonaremos un App.</li><li class="list-group-item"><span class="glyphicon glyphicon-ok"></span> Aprenderas a Compilar y Distribuir.</li></ul><a class="btn btn-primary btn-lg" href="https://www.crowdcast.io/e/5xumzpvi" target="_blank"><span class="glyphicon glyphicon-tag"></span> Reservar mi lugar</a>
+</p>

@@ -313,3 +313,7 @@ code {
 .img-rounded {
     border-radius: 45%;
 }
+
+.padding {
+  padding: 10px;
+}
