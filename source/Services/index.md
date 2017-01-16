@@ -9,9 +9,9 @@ I currently only offer support via email. Since I still have other commitments (
 
 <blockquote>Time is my only resource as a Consultant.</blockquote>
 
-## Basic Support (1 hour)
-
 <img src="https://firebasestorage.googleapis.com/v0/b/modular-source-808.appspot.com/o/page%2Fpic.png?alt=media&token=3c575265-9c4e-4527-802b-79b4bdf7ab68" alt="">
+
+## Basic Coaching (1 hour)
 
 ### What you get ? 
 
@@ -24,10 +24,17 @@ I’m not going to cut you off as soon as you’ve <accum></accum>ulated an hour
 <script async src="https://gumroad.com/js/gumroad.js"></script>
 <div align="right"><a class="gumroad-button" href="https://gum.co/yfaUJ" target="_blank" data-gumroad-single-product="true">Buy my product</a></div>
 
-## Premium Support (3 hour)
+## Premium Coaching (3 hour)
 
 <blockquote>Guidance, Review code or  can code up some simple solutions.</blockquote>
 
 <div align="right"><a class="gumroad-button" href="https://gum.co/yfaUJ" target="_blank" data-gumroad-single-product="true">Buy my product</a></div>
+
+## Enterprise Coaching (10 hour)
+
+<blockquote>Guidance, Prototyping or Pull request to repositories. Mainly for Dev teams.</blockquote>
+
+<div align="right"><a class="gumroad-button" href="https://gum.co/rqkzu" target="_blank" data-gumroad-single-product="true">Buy my product</a></div>
+
 
 If you have any questions about the packages. pls drop me an email: <code>hi@carlosrojasblog.com</code>
