@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Building your first App: Preparation | Carlos Rojas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hello Startupers!! and welcome to this travel called Ionic 2. 
+First of all I want to do a distinction between Ionic 1 and Ionic 2
+If it’s your first time exploring Hybrid Apps maybe you can be confu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building your first App: Preparation">
+<meta property="og:url" content="http://www.carlosrojasblog.com/2017/01/01/Building-your-first-App-Preparation/index.html">
+<meta property="og:site_name" content="Carlos Rojas">
+<meta property="og:description" content="Hello Startupers!! and welcome to this travel called Ionic 2. 
+First of all I want to do a distinction between Ionic 1 and Ionic 2
+If it’s your first time exploring Hybrid Apps maybe you can be confu">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/AAEAAQAAAAAAAAd1AAAAJGU4ZDc4OTAzLWQzYzktNGQ2Ny1iODU3LWUxYzQyMjY4YzA5OA.png?alt=media&token=17030062-508e-43b2-9cf3-aef7563883e0">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Screen%20Shot%202016-11-22%20at%2012.53.40%20PM.png?alt=media&token=d35c067a-7d22-4381-bee8-646a4198aa5f">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Screen%20Shot%202016-11-22%20at%2012.55.55%20PM%20(1).png?alt=media&token=df35d032-326c-4940-992d-1ded976ec9c7">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%2012.59.39%20PM%20(1).png?alt=media&token=196e5d56-456d-4f14-a88c-0afcd2fd3c2b">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.02.16%20PM.png?alt=media&token=6e6a96ae-99c8-4013-9e9c-a24ac11c0993">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.05.01%20PM%20(1).png?alt=media&token=6818defd-84c2-4fcb-90a3-56739d1b5525">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.11.37%20PM%20(1).png?alt=media&token=e4386080-b652-4afb-937d-11896518404a">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.19.08%20PM.png?alt=media&token=2a8c983c-1d33-4fb3-a5f3-1a67c0d6b1d3">
+<meta property="og:updated_time" content="2017-01-08T20:50:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building your first App: Preparation">
+<meta name="twitter:description" content="Hello Startupers!! and welcome to this travel called Ionic 2. 
+First of all I want to do a distinction between Ionic 1 and Ionic 2
+If it’s your first time exploring Hybrid Apps maybe you can be confu">
+<meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/AAEAAQAAAAAAAAd1AAAAJGU4ZDc4OTAzLWQzYzktNGQ2Ny1iODU3LWUxYzQyMjY4YzA5OA.png?alt=media&token=17030062-508e-43b2-9cf3-aef7563883e0">
+<meta name="twitter:creator" content="@carlosrojas_o">
+  
+    <link rel="alternate" href="/atom.xml" title="Carlos Rojas" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-5126579-6', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/index.html">Blog</a></li>
+        
+          <li><a class=""
+                 href="https://www.getrevue.co/profile/carlosrojas_o/">Issues</a></li>
+        
+          <li><a class=""
+                 href="/Services/index.html">Services</a></li>
+        
+          <li><a class=""
+                 href="/Training/index.html">Training</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Carlos Rojas</h1>
+  
+    <p class="lead blog-description">Digital Nomad + Google Product Strategy Expert</p>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-12 blog-main">
+          <article id="post-Building-your-first-App-Preparation" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      Building your first App: Preparation
+    </h1>
+  
+
+
+  </header>
+  
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2017/01/01/Building-your-first-App-Preparation/" class="article-date"><time datetime="2017-01-01T20:20:15.000Z" itemprop="datePublished">2017-01-01</time></a>
+</div>
+
+    
+    
+
+  </div>
+   
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/AAEAAQAAAAAAAAd1AAAAJGU4ZDc4OTAzLWQzYzktNGQ2Ny1iODU3LWUxYzQyMjY4YzA5OA.png?alt=media&token=17030062-508e-43b2-9cf3-aef7563883e0"></p>
+<p>Hello Startupers!! and welcome to this travel called Ionic 2. </p>
+<p>First of all I want to do a distinction between Ionic 1 and Ionic 2</p>
+<p>If it’s your first time exploring Hybrid Apps maybe you can be confussed because people is talking about Ionic 1 and Ionic 2 </p>
+<p><i>are similars? it’s the same? </i></p>
+<p>Well, basically this two versions of Ionic share the ideology to use html/js/css to build mobile apps. this two versions use the same CLI then you can use<br>the same commands to build, serve and deploy. but are differents mainly because Ionic 1 use Angular 1.x.x and Ionic 2 use Angular 2.x.x and this two technologies<br>only share the name :)</p>
+<p>Ok. then having said that think that we gonna focus in this course in Ionic 2.</p>
+<h2>Installing Ionic.</h2>
+
+<h3>Installing Node and Cordova</h3>
+
+<p>Ionic CLI is installed on top of Node and Ionic is Built on top of Cordova, so you gonna need <a href="https://nodejs.org/" target="_blank" rel="external">Download and Install a recent version of Node from here</a>.</p>
+<p>Once you have Node.js installed, you will be able to access the node package manager or npm through your command terminal.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm install -g ionic cordova</div></pre></td></tr></table></figure>
+<p>*Maybe you can need <figure class="highlight plain"><figcaption><span>```` in order to install globally*</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;h3&gt;Installing Android SDK&lt;/h3&gt;</div><div class="line"></div><div class="line">You gonna need Android installed in your machine to run smoothly ionic. Please follow these guides.</div><div class="line"></div><div class="line">[Mac OS X](http://ionicframework.com/docs/v2/resources/platform-setup/mac-setup.html)</div><div class="line"></div><div class="line">[Windows](http://ionicframework.com/docs/v2/resources/platform-setup/windows-setup.html)</div><div class="line"></div><div class="line">&lt;h3&gt;Installing XCODE only for Mac OS X&lt;/h3&gt;</div><div class="line"></div><div class="line">If you have a Mac, you gonna need de Xcode CLI Tools. Follow the link and install.</div><div class="line"></div><div class="line">[Download XCODE](https://developer.apple.com/xcode/)</div><div class="line"></div><div class="line">&lt;h3&gt;Creating your first Ionic 2 App. Yeeeih!!&lt;/h3&gt;</div><div class="line"></div><div class="line">Ok, now we need write this command:</div><div class="line"></div><div class="line">````script</div><div class="line"></div><div class="line">ionic start myFirstApp --v2</div></pre></td></tr></table></figure></p>
+<p>Ok, now if everything goes well, you can see in your directory location a new folder called <em>“myFirstApp”</em> and in your terminal CLI. Something like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">♬ ♫ ♬ ♫  Your Ionic app is ready to go! ♬ ♫ ♬ ♫</div><div class="line"></div><div class="line">Some helpful tips:</div><div class="line"></div><div class="line">Run your app in the browser (great for initial development):</div><div class="line">  ionic serve</div><div class="line"></div><div class="line">Run on a device or simulator:</div><div class="line">  ionic run ios[android,browser]</div><div class="line"></div><div class="line">Test and share your app on device with Ionic View:</div><div class="line">  http://view.ionic.io</div><div class="line"></div><div class="line">Build better Enterprise apps with expert Ionic support:</div><div class="line">  http://ionic.io/enterprise</div><div class="line"></div><div class="line">New! Add push notifications, live app updates, and more </div><div class="line">with Ionic Cloud!</div><div class="line">  https://apps.ionic.io/signup</div></pre></td></tr></table></figure>
+<p>Now we need move to our project folder.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">cd myFirstApp</div></pre></td></tr></table></figure>
+<p>From now on, whenever you are going to type something in the CLI it’s gonna be in this location.</p>
+<p>Now, we going to start our new App. type in the terminal CLI.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">ionic serve</div></pre></td></tr></table></figure>
+<p>You have to see something like this in your browser:</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Screen%20Shot%202016-11-22%20at%2012.53.40%20PM.png?alt=media&token=d35c067a-7d22-4381-bee8-646a4198aa5f" width="100%"></p>
+<p>If you see that screen your are very good :) gratz.</p>
+<p>Now, I personally use Chrome Dev Tools to work in my projects.</p>
+<p>To use this from your Browser you need Click-Right Button in your Mouse. And select “Inspect”.</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Screen%20Shot%202016-11-22%20at%2012.55.55%20PM%20(1).png?alt=media&token=df35d032-326c-4940-992d-1ded976ec9c7" width="100%"></p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%2012.59.39%20PM%20(1).png?alt=media&token=196e5d56-456d-4f14-a88c-0afcd2fd3c2b" width="100%"></p>
+<p>Press in the 3 points in the corner and select “Dock to right”.</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.02.16%20PM.png?alt=media&token=6e6a96ae-99c8-4013-9e9c-a24ac11c0993" width="35%"></p>
+<p>and later, press in the small device image.</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.05.01%20PM%20(1).png?alt=media&token=6818defd-84c2-4fcb-90a3-56739d1b5525" width="35%"></p>
+<p>Now you can see something like this:</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.11.37%20PM%20(1).png?alt=media&token=e4386080-b652-4afb-937d-11896518404a" width="100%"></p>
+<p>Perfect!! now, we are almost ready. </p>
+<p><br><br><em>Are you enjoying this Post?</em></p>
+<p><em>Enroll in our FREE 5 lesson course that will help take your understand Ionic 2 and Ionic Cloud.</em></p>
+<p><form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post"></form></p>
+<p><input name="seller_id" type="hidden" value="8823315497069"></p>
+<p><input name="email" placeholder="Your email address" type="email"></p>
+<p><button data-custom-highlight-color="" type="submit">Subscribe</button><br><br><br></p>
+<p>Additionally, you need and editor. you can find <a href="http://ionicframework.com/docs/v2/resources/editors_and_ides/" target="_blank" rel="external">good options here</a>.</p>
+<p>I’m using Visual Studio Code. </p>
+<p>Then, when you choose your editor you going to need open the project there:</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-11-22%20at%201.19.08%20PM.png?alt=media&token=2a8c983c-1d33-4fb3-a5f3-1a67c0d6b1d3" alt="" width="100%"></p>
+<p>Cool, What next?</p>
+<p>Well, we going to create an app that have these features:</p>
+<ul>
+<li>You can read news from a Feed (RSS).</li>
+<li>You can register users.</li>
+<li>You can Authenticate users.</li>
+<li>Your users can reset password.</li>
+</ul>
+<p>Ok, that’s all for now. In 6 or 7 days from received this in your email you going to receive the next lesson. but, meanwhile<br>you can read the next links :)</p>
+<p><a href="http://j.mp/2gyce3x" target="_blank" rel="external">What are RSS feeds?</a></p>
+<p><a href="http://j.mp/1zaQGbP" target="_blank" rel="external">Angular 2 Series</a></p>
+<p><a href="http://j.mp/2gylULG" target="_blank" rel="external">Ionic Cloud Services</a></p>
+<p>Please rate this <a href="https://carlosrojaso.typeform.com/to/Y07Lg9" target="_blank" rel="external">lesson here</a> and Help us to improve :)</p>
+<p>Keep coding…</p>
+<p>Carlos Rojas<br>@carlosrojas_o</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://www.carlosrojasblog.com/2017/01/01/Building-your-first-App-Preparation/" data-id="ciyvzlk970007x8v8snzj0f37" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic2/">ionic2</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2016/10/15/2016-10-15-art-of-cross-hybrid-apps/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">The Art of Cross/Hybrid Apps State</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2017/01/02/Building-your-first-App-Fundamentals/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Building your first App: Fundamentals</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</article>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2017 {} Carlos Rojas<br>
+    </div>
+  </div>
+</footer>
+
+  
+
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script src="/js/script.js"></script>
+<script type="text/javascript">
+(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/2MLn06G3xMFaacqYzo4NxOFldSJFTjZXH9QRnuPy/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+</script>
+
+ 
+</body>
+</html>

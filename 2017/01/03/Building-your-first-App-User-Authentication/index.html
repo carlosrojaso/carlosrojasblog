@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Building your first App: User Authentication | Carlos Rojas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hello Startupers!!! and welcome to our lesson number 3. Hooray!!!
+if you remember the first lesson we create a simple App called myFirstApp you can go here
+Now, we going to continue building our amaz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building your first App: User Authentication">
+<meta property="og:url" content="http://www.carlosrojasblog.com/2017/01/03/Building-your-first-App-User-Authentication/index.html">
+<meta property="og:site_name" content="Carlos Rojas">
+<meta property="og:description" content="Hello Startupers!!! and welcome to our lesson number 3. Hooray!!!
+if you remember the first lesson we create a simple App called myFirstApp you can go here
+Now, we going to continue building our amaz">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Ffirebase-ionic-user-authentication.png?alt=media&token=a0422048-52b1-4b85-b017-48063ce1fd85">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-12-19%20at%2010.59.23%20PM.png?alt=media&token=6820112d-a01d-4612-81cc-fa9e6191b075">
+<meta property="og:updated_time" content="2017-01-08T20:51:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Building your first App: User Authentication">
+<meta name="twitter:description" content="Hello Startupers!!! and welcome to our lesson number 3. Hooray!!!
+if you remember the first lesson we create a simple App called myFirstApp you can go here
+Now, we going to continue building our amaz">
+<meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Ffirebase-ionic-user-authentication.png?alt=media&token=a0422048-52b1-4b85-b017-48063ce1fd85">
+<meta name="twitter:creator" content="@carlosrojas_o">
+  
+    <link rel="alternate" href="/atom.xml" title="Carlos Rojas" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/css/styles.css">
+  
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-5126579-6', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class=""
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/index.html">Blog</a></li>
+        
+          <li><a class=""
+                 href="https://www.getrevue.co/profile/carlosrojas_o/">Issues</a></li>
+        
+          <li><a class=""
+                 href="/Services/index.html">Services</a></li>
+        
+          <li><a class=""
+                 href="/Training/index.html">Training</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Carlos Rojas</h1>
+  
+    <p class="lead blog-description">Digital Nomad + Google Product Strategy Expert</p>
+  
+</div>
+
+    <div class="row">
+        <div class="col-sm-12 blog-main">
+          <article id="post-Building-your-first-App-User-Authentication" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 class="article-title" itemprop="name">
+      Building your first App: User Authentication
+    </h1>
+  
+
+
+  </header>
+  
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2017/01/03/Building-your-first-App-User-Authentication/" class="article-date"><time datetime="2017-01-03T20:22:10.000Z" itemprop="datePublished">2017-01-03</time></a>
+</div>
+
+    
+    
+
+  </div>
+   
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Ffirebase-ionic-user-authentication.png?alt=media&token=a0422048-52b1-4b85-b017-48063ce1fd85" alt="Auth image"></p>
+<p>Hello Startupers!!! and welcome to our lesson number 3. Hooray!!!</p>
+<p>if you remember the first lesson we create a simple App called <em>myFirstApp</em> you can go <a href="http://www.startupers.io/ionic-2-lesson1" target="_blank" rel="external">here</a></p>
+<p>Now, we going to continue building our amazing App. Remember our goals.</p>
+<ul>
+<li>Read news from a Feed (RSS).</li>
+<li>Register users.</li>
+<li>Authenticate users.</li>
+<li>Reset password.</li>
+</ul>
+<p>First, we need delete the existing pages in my project. When you create a new project by default ionic add some pages about, contacts, tabs, etc.</p>
+<p>If you want a project blank you can add the <em>blank</em> parameter in the end of</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ionic start myFirstApp --v2 blank</div></pre></td></tr></table></figure>
+<p>Delete all the directories in <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">Now, We going to need create some Pages. to do this we going to use a CLI command called [generate](http://ionicframework.com/docs/v2/cli/generate/)</div><div class="line"></div><div class="line">````javascript</div><div class="line">$ ionic generate page NewsDetail</div><div class="line">$ ionic generate page NewsListing</div><div class="line">$ ionic generate page Login</div><div class="line">$ ionic generate page Profile</div><div class="line">$ ionic generate page ResetPassword</div><div class="line">$ ionic generate page Signup</div></pre></td></tr></table></figure></p>
+<p>That will generate all the pages we need, and then we need go to our <figure class="highlight plain"><figcaption><span>and import all our news pages and remove the old ones, at the end we would to have something like this:</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">````javascript</div><div class="line"></div><div class="line">import &#123; NgModule &#125; from &apos;@angular/core&apos;;</div><div class="line">import &#123; IonicApp, IonicModule &#125; from &apos;ionic-angular&apos;;</div><div class="line">import &#123; MyApp &#125; from &apos;./app.component&apos;;</div><div class="line">import &#123; NewsDetailPage &#125; from &apos;../pages/news-detail/news-detail&apos;;</div><div class="line">import &#123; NewsListingPage &#125; from &apos;../pages/news-listing/news-listing&apos;;</div><div class="line">import &#123; LoginPage &#125; from &apos;../pages/login/login&apos;;</div><div class="line">import &#123; ProfilePage &#125; from &apos;../pages/profile/profile&apos;;</div><div class="line">import &#123; ResetPasswordPage &#125; from &apos;../pages/reset-password/reset-password&apos;;</div><div class="line">import &#123; SignupPage &#125; from &apos;../pages/signup/signup&apos;;</div></pre></td></tr></table></figure></p>
+<p>And add the pages in NgModule</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">@NgModule(&#123;</div><div class="line">  <span class="attr">declarations</span>: [</div><div class="line">    MyApp,</div><div class="line">    NewsDetailPage,</div><div class="line">    NewsListingPage,</div><div class="line">    LoginPage,</div><div class="line">    ProfilePage,</div><div class="line">    ResetPasswordPage,</div><div class="line">    SignupPage</div><div class="line">  ],</div><div class="line">  <span class="attr">imports</span>: [</div><div class="line">    IonicModule.forRoot(MyApp)</div><div class="line">  ],</div><div class="line">  <span class="attr">bootstrap</span>: [IonicApp],</div><div class="line">  <span class="attr">entryComponents</span>: [</div><div class="line">    MyApp,</div><div class="line">    NewsDetailPage,</div><div class="line">    NewsListingPage,</div><div class="line">    LoginPage,</div><div class="line">    ProfilePage,</div><div class="line">    ResetPasswordPage,</div><div class="line">    SignupPage</div><div class="line">  ],</div><div class="line">  <span class="attr">providers</span>: []</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123;&#125;</div></pre></td></tr></table></figure>
+<h2 id="Connecting-our-App-with-Ionic-Cloud"><a href="#Connecting-our-App-with-Ionic-Cloud" class="headerlink" title="Connecting our App with Ionic Cloud."></a>Connecting our App with Ionic Cloud.</h2><p>Now, we need install the Cloud service client.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ npm install @ionic/cloud-angular --save</div></pre></td></tr></table></figure>
+<p>Before you can configure your cloud settings, you’ll need to have an app ID. In your project directory, run:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ ionic io init</div></pre></td></tr></table></figure>
+<p>Define a CloudSettings object for your app’s cloud settings. Replace APP_ID with your app’s ID, which you can find in your <figure class="highlight plain"><figcaption><span>file.</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">````javascript</div><div class="line"></div><div class="line">import &#123; CloudSettings, CloudModule &#125; from &apos;@ionic/cloud-angular&apos;;</div><div class="line"></div><div class="line">const cloudSettings: CloudSettings = &#123;</div><div class="line">  &apos;core&apos;: &#123;</div><div class="line">    &apos;app_id&apos;: &apos;APP_ID&apos;</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>And we need to add your cloud settings into <figure class="highlight plain"><figcaption><span>inside ````NgModule````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">````javascript</div><div class="line"></div><div class="line">@NgModule(&#123;</div><div class="line">  declarations: [ ... ],</div><div class="line">  imports: [</div><div class="line">    IonicModule.forRoot(MyApp),</div><div class="line">    CloudModule.forRoot(cloudSettings)</div><div class="line">  ],</div><div class="line">  bootstrap: [IonicApp],</div><div class="line">  entryComponents: [ ... ],</div><div class="line">  providers: [ ... ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>Ok, in this point we should have everything connected.</p>
+<p><br><br><em>Are you enjoying this Post?</em></p>
+<p><em>Enroll in our FREE 5 lesson course that will help take your understand Ionic 2 and Ionic Cloud.</em></p>
+<p><form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post"></form></p>
+<p><input name="seller_id" type="hidden" value="8823315497069"></p>
+<p><input name="email" placeholder="Your email address" type="email"></p>
+<p><button data-custom-highlight-color="" type="submit">Subscribe</button><br><br><br></p>
+<h2 id="Creating-the-Login-Page"><a href="#Creating-the-Login-Page" class="headerlink" title="Creating the Login Page."></a>Creating the Login Page.</h2><p>If you remember we create some pages with the <a href="http://ionicframework.com/docs/v2/cli/generate/" target="_blank" rel="external"> generate command </a> and you should have this pages in <figure class="highlight plain"><figcaption><span>````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;img src=&quot;https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2Fdir_pages.png?alt=media&amp;token=72d7dc02-5947-4700-ad31-97a6b00e10b0&quot; alt=&quot;&quot;&gt;</div><div class="line"></div><div class="line">We going to create our *login view* first we need open ```` src/pages/login/login.html ```` and add some components.</div><div class="line"></div><div class="line">### login.html </div><div class="line"></div><div class="line">```` javascript</div><div class="line"></div><div class="line">&lt;ion-header&gt;</div><div class="line">  &lt;ion-navbar color=&quot;primary&quot;&gt;</div><div class="line">    &lt;ion-title&gt;Login&lt;/ion-title&gt;</div><div class="line">  &lt;/ion-navbar&gt;</div><div class="line">&lt;/ion-header&gt;</div><div class="line"></div><div class="line">&lt;ion-content&gt;</div><div class="line">  &lt;form [formGroup]=&quot;myForm&quot; (ngSubmit)=&quot;loginUser()&quot; padding class=&quot;loginpage&quot;&gt;</div><div class="line">    &lt;ion-list&gt;</div><div class="line">      &lt;ion-item&gt;</div><div class="line">        &lt;ion-icon name=&quot;person&quot; item-left&gt;&lt;/ion-icon&gt;</div><div class="line">        &lt;ion-label stacked&gt;Email:&lt;/ion-label&gt;</div><div class="line">        &lt;ion-input formControlName=&quot;email&quot; type=&quot;text&quot; placeholder=&quot;Email&quot;&gt;&lt;/ion-input&gt;</div><div class="line">      &lt;/ion-item&gt;</div><div class="line">      &lt;ion-item&gt;</div><div class="line">        &lt;ion-icon name=&quot;key&quot; item-left&gt;&lt;/ion-icon&gt;</div><div class="line">        &lt;ion-label stacked&gt;Password:&lt;/ion-label&gt;</div><div class="line">        &lt;ion-input formControlName=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot;&gt;&lt;/ion-input&gt;</div><div class="line">      &lt;/ion-item&gt;</div><div class="line">    &lt;/ion-list&gt;</div><div class="line">    &lt;div padding&gt;</div><div class="line">      &lt;button ion-button block type=&quot;submit&quot; [disabled]=&quot;!myForm.valid&quot;&gt;Login&lt;/button&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">  &lt;div text-center&gt;</div><div class="line">   &lt;a block clear (click)=&quot;goToSignup()&quot;&gt;</div><div class="line">      Create a new account</div><div class="line">    &lt;/a&gt;</div><div class="line"></div><div class="line">    &lt;a block clear (click)=&quot;goToResetPassword()&quot;&gt;</div><div class="line">      I forgot my password</div><div class="line">    &lt;/a&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/ion-content&gt;</div></pre></td></tr></table></figure></p>
+<p>here we gonna see that we are using some components that are from Ionic Framework. </p>
+<p>We going to see more in depth what the components are in the next lessons, but meanwhile you can check this links:</p>
+<p><a href="https://ionicframework.com/docs/v2/api/components/content/Content/" target="_blank" rel="external">ion-content</a>{:target=”_blank”}</p>
+<p><a href="https://ionicframework.com/docs/v2/api/components/toolbar/Header/" target="_blank" rel="external">ion-header</a>{:target=”_blank”}</p>
+<p><a href="https://ionicframework.com/docs/v2/api/components/navbar/Navbar/" target="_blank" rel="external">ion-navbar</a>{:target=”_blank”}</p>
+<p><a href="https://ionicframework.com/docs/v2/resources/forms/" target="_blank" rel="external">Forms</a>{:target=”_blank”}</p>
+<p>the important thing to see here is the functions <figure class="highlight plain"><figcaption><span>,  ````goToSignup()```` and ````goToResetPassword()````</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">We going need that when the user submit the *form* our app send the info to *Ionic Cloud* and register the new user.</div><div class="line"></div><div class="line"></div><div class="line">````javascript</div><div class="line"></div><div class="line">  private loginUser()&#123;</div><div class="line"></div><div class="line">    console.log(&quot;Email:&quot; + this.myForm.controls[&apos;email&apos;].value);</div><div class="line">    console.log(&quot;Password:&quot; + this.myForm.controls[&apos;password&apos;].value);</div><div class="line">   </div><div class="line">    let details = &#123;&apos;email&apos;: this.myForm.controls[&apos;email&apos;].value, &apos;password&apos;: this.myForm.controls[&apos;password&apos;].value&#125;;</div><div class="line"></div><div class="line">    this.auth.login(&apos;basic&apos;, details).then(() =&gt; &#123;</div><div class="line">    console.log(&quot;User logging&quot;);</div><div class="line">    this.navCtrl.push(NewsListingPage);</div><div class="line">    &#125;, (err) =&gt; &#123;</div><div class="line"></div><div class="line">        console.log(err.message);</div><div class="line"></div><div class="line">        let errors = &apos;&apos;;</div><div class="line">        if(err.message === &apos;UNPROCESSABLE ENTITY&apos;) errors += &apos;Email isn\&apos;t valid.&lt;br/&gt;&apos;;</div><div class="line">        if(err.message === &apos;UNAUTHORIZED&apos;) errors += &apos;Password is required.&lt;br/&gt;&apos;;</div><div class="line">      &#125;</div><div class="line">      );</div><div class="line">  </div><div class="line"></div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>Because we are using a <figure class="highlight plain"><figcaption><span>we need to use this way to get the values.</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">````javascript</div><div class="line">this.myForm.controls[&apos;email&apos;].value</div><div class="line">this.myForm.controls[&apos;password&apos;].value</div></pre></td></tr></table></figure></p>
+<p>and after that we going to use the login method provide for <em>Ionic Cloud</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">this</span>.auth.login(<span class="string">'basic'</span>, details).then( ... );</div></pre></td></tr></table></figure>
+<p>the other functions are for navigation in the views.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">private goToSignup()&#123;</div><div class="line">    <span class="keyword">this</span>.navCtrl.push(SignupPage);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">private goToResetPassword()&#123;</div><div class="line">    <span class="keyword">this</span>.navCtrl.push(ResetPasswordPage);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<p>and all the magic together</p>
+<h3 id="login-ts"><a href="#login-ts" class="headerlink" title="login.ts"></a>login.ts</h3><figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">import</span> &#123; Component &#125; from <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; NavController, AlertController, LoadingController &#125; from <span class="string">'ionic-angular'</span>;</div><div class="line"><span class="keyword">import</span> &#123; Auth, User &#125; from <span class="string">'@ionic/cloud-angular'</span>;</div><div class="line"><span class="keyword">import</span> &#123; FormBuilder, FormGroup, Validators &#125; from <span class="string">'@angular/forms'</span>;</div><div class="line"><span class="keyword">import</span> &#123; ResetPasswordPage &#125; from <span class="string">'../reset-password/reset-password'</span>;</div><div class="line"><span class="keyword">import</span> &#123; SignupPage &#125; from <span class="string">'../signup/signup'</span>;</div><div class="line"><span class="keyword">import</span> &#123; NewsListingPage &#125; from <span class="string">'../news-listing/news-listing'</span>;</div><div class="line"></div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'page-login'</span>,</div><div class="line">  templateUrl: <span class="string">'login.html'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> LoginPage &#123;</div><div class="line">   myForm: FormGroup;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(<span class="params"></span></div><div class="line">    <span class="keyword">public</span> navCtrl: NavController,</div><div class="line">    <span class="keyword">public</span> formBuilder: FormBuilder,</div><div class="line">    <span class="keyword">public</span> auth: Auth, </div><div class="line">    <span class="keyword">public</span> user: User</div><div class="line">  ) &#123;</div><div class="line">    <span class="keyword">this</span>.myForm = <span class="keyword">this</span>.formBuilder.group(&#123;</div><div class="line">      email: [<span class="string">''</span>, Validators.required],</div><div class="line">      password: [<span class="string">''</span>, Validators.required]</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> loginUser()&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Email:"</span> + <span class="keyword">this</span>.myForm.controls[<span class="string">'email'</span>].value);</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Password:"</span> + <span class="keyword">this</span>.myForm.controls[<span class="string">'password'</span>].value);</div><div class="line">   </div><div class="line">    <span class="keyword">let</span> details = &#123;<span class="string">'email'</span>: <span class="keyword">this</span>.myForm.controls[<span class="string">'email'</span>].value, <span class="string">'password'</span>: <span class="keyword">this</span>.myForm.controls[<span class="string">'password'</span>].value&#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.auth.login(<span class="string">'basic'</span>, details).then(() =&gt; &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"User logging"</span>);</div><div class="line">    <span class="keyword">this</span>.navCtrl.push(NewsListingPage);</div><div class="line">    &#125;, (err) =&gt; &#123;</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(err.message);</div><div class="line"></div><div class="line">        <span class="keyword">let</span> errors = <span class="string">''</span>;</div><div class="line">        <span class="keyword">if</span>(err.message === <span class="string">'UNPROCESSABLE ENTITY'</span>) errors += <span class="string">'Email isn\'t valid.&lt;br/&gt;'</span>;</div><div class="line">        <span class="keyword">if</span>(err.message === <span class="string">'UNAUTHORIZED'</span>) errors += <span class="string">'Password is required.&lt;br/&gt;'</span>;</div><div class="line">      &#125;</div><div class="line">      );</div><div class="line">  </div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> goToSignup()&#123;</div><div class="line">    <span class="keyword">this</span>.navCtrl.push(SignupPage);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> goToResetPassword()&#123;</div><div class="line">    <span class="keyword">this</span>.navCtrl.push(ResetPasswordPage);</div><div class="line">  &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>we can add some styles too in <figure class="highlight plain"><figcaption><span>````:</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### login.scss </div><div class="line"></div><div class="line">`````scss</div><div class="line"></div><div class="line">.loginpage &#123;</div><div class="line">  form &#123;</div><div class="line">    margin-bottom: 20px;</div><div class="line">    button &#123;</div><div class="line">      margin-top: 10px;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  ion-label &#123;</div><div class="line">    margin-left: 5px;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  ion-input &#123;</div><div class="line">    padding: 5px;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure></p>
+<p>In this point we should see something like this:</p>
+<p><img src="https://firebasestorage.googleapis.com/v0/b/startupers-9cbb6.appspot.com/o/Posts%2FScreen%20Shot%202016-12-19%20at%2010.59.23%20PM.png?alt=media&token=6820112d-a01d-4612-81cc-fa9e6191b075" alt=""></p>
+<p>Ok, now we need modify the <em>SignupPage</em> to create new users in our app.</p>
+<p>We can use a similar form like in the login page.</p>
+<h3 id="signup-html"><a href="#signup-html" class="headerlink" title="signup.html"></a>signup.html</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;ion-header&gt;</div><div class="line">  &lt;ion-navbar color="primary"&gt;</div><div class="line">    &lt;ion-title&gt;Signup&lt;/ion-title&gt;</div><div class="line">  &lt;/ion-navbar&gt;</div><div class="line">&lt;/ion-header&gt;</div><div class="line"></div><div class="line">&lt;ion-content&gt;</div><div class="line">  &lt;form [formGroup]="myForm" (ngSubmit)="Signup()" padding class="login"&gt;</div><div class="line">    &lt;ion-icon name="contact"&gt;&lt;/ion-icon&gt;</div><div class="line">    &lt;ion-list&gt;</div><div class="line">      &lt;ion-item&gt;</div><div class="line">        &lt;ion-icon name="person" item-left&gt;&lt;/ion-icon&gt;</div><div class="line">        &lt;ion-label stacked&gt;Email:&lt;/ion-label&gt;</div><div class="line">        &lt;ion-input formControlName="email" type="text" placeholder="Email"&gt;&lt;/ion-input&gt;</div><div class="line">      &lt;/ion-item&gt;</div><div class="line">      &lt;ion-item&gt;</div><div class="line">        &lt;ion-icon name="key" item-left&gt;&lt;/ion-icon&gt;</div><div class="line">        &lt;ion-label stacked&gt;Password:&lt;/ion-label&gt;</div><div class="line">        &lt;ion-input formControlName="password" type="password" placeholder="Password"&gt;&lt;/ion-input&gt;</div><div class="line">      &lt;/ion-item&gt;</div><div class="line">    &lt;/ion-list&gt;</div><div class="line">    &lt;div padding&gt;</div><div class="line">      &lt;button ion-button block type="submit" [disabled]="!myForm.valid"&gt;Register&lt;/button&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/ion-content&gt;</div></pre></td></tr></table></figure>
+<p>Important to see here the function <figure class="highlight plain"><figcaption><span>where we need to apply the *signup* method from Ionic Cloud.</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>this.auth.signup(details).then(() =&gt; {<br>  // <code>this.user</code> is now registered<br>}, (err: IDetailedError<string[]>) =&gt; {<br>  for (let e of err.details) {<br>    if (e === ‘conflict_email’) {<br>      alert(‘Email already exists.’);<br>    } else {<br>      // handle other errors<br>    }<br>  }<br>});</string[]></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">all together</div><div class="line"></div><div class="line">### signup.ts</div><div class="line"></div><div class="line">````javascript</div><div class="line"></div><div class="line">import &#123; Component &#125; from &apos;@angular/core&apos;;</div><div class="line">import &#123; NavController &#125; from &apos;ionic-angular&apos;;</div><div class="line">import &#123; Auth, User, UserDetails, IDetailedError &#125; from &apos;@ionic/cloud-angular&apos;;</div><div class="line">import &#123; FormBuilder, FormGroup, Validators &#125; from &apos;@angular/forms&apos;;</div><div class="line">import &#123; LoginPage &#125; from &apos;../login/login&apos;;</div><div class="line"></div><div class="line">/*</div><div class="line">  Generated class for the Signup page.</div><div class="line"></div><div class="line">  See http://ionicframework.com/docs/v2/components/#navigation for more info on</div><div class="line">  Ionic pages and navigation.</div><div class="line">*/</div><div class="line">@Component(&#123;</div><div class="line">  selector: &apos;page-signup&apos;,</div><div class="line">  templateUrl: &apos;signup.html&apos;</div><div class="line">&#125;)</div><div class="line">export class SignupPage &#123;</div><div class="line"></div><div class="line">  myForm: FormGroup;</div><div class="line"></div><div class="line">  constructor(</div><div class="line">    public navCtrl: NavController,</div><div class="line">    public formBuilder: FormBuilder,</div><div class="line">    public auth: Auth, </div><div class="line">    public user: User</div><div class="line">  ) &#123;</div><div class="line">    this.myForm = this.formBuilder.group(&#123;</div><div class="line">      email: [&apos;&apos;, Validators.required],</div><div class="line">      password: [&apos;&apos;, Validators.required]</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  ionViewDidLoad() &#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  private Signup()&#123;</div><div class="line"></div><div class="line">    console.log(&quot;Email:&quot; + this.myForm.controls[&apos;email&apos;].value);</div><div class="line">    console.log(&quot;Password:&quot; + this.myForm.controls[&apos;password&apos;].value);</div><div class="line">   </div><div class="line">    let details: UserDetails = &#123;&apos;email&apos;: this.myForm.controls[&apos;email&apos;].value, &apos;password&apos;: this.myForm.controls[&apos;password&apos;].value&#125;;</div><div class="line"></div><div class="line">    this.auth.signup(details).then(() =&gt; &#123;</div><div class="line">      // `this.user` is now registered</div><div class="line">      console.log(&apos;Registered&apos;);</div><div class="line">      this.navCtrl.push(LoginPage);</div><div class="line">    &#125;, (err: IDetailedError&lt;string[]&gt;) =&gt; &#123;</div><div class="line">      for (let e of err.details) &#123;</div><div class="line">        switch (e) &#123;</div><div class="line">        case &apos;required_email&apos;: </div><div class="line">          console.log(&apos;Missing email field.&apos;);</div><div class="line">        case &apos;required_password&apos;: </div><div class="line">          console.log(&apos;Missing password field&apos;);</div><div class="line">        break; </div><div class="line">        case &apos;conflict_email&apos;: </div><div class="line">          console.log(&apos;A user has already signed up with the supplied email&apos;);</div><div class="line">        break;</div><div class="line">        case &apos;conflict_username&apos;: </div><div class="line">          console.log(&apos;A user has already signed up with the supplied username&apos;);</div><div class="line">        break;</div><div class="line">        case &apos;invalid_email&apos;: </div><div class="line">          console.log(&apos;The email did not pass validation.&apos;);</div><div class="line">        break;</div><div class="line">        default:</div><div class="line">          console.log(&apos;Something unknow.&apos;);</div><div class="line">      &#125;     </div><div class="line">      &#125;</div><div class="line">    &#125;); </div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>ok, now we gonna build the reset page.</p>
+<h3 id="reset-password-html"><a href="#reset-password-html" class="headerlink" title="reset-password.html"></a>reset-password.html</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;ion-header&gt;</div><div class="line"></div><div class="line">  &lt;ion-navbar&gt;</div><div class="line">    &lt;ion-title&gt;ResetPassword&lt;/ion-title&gt;</div><div class="line">  &lt;/ion-navbar&gt;</div><div class="line"></div><div class="line">&lt;/ion-header&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;ion-content padding&gt;</div><div class="line">&lt;form [formGroup]="myForm" (ngSubmit)="ResetPassword()" padding class="login"&gt;</div><div class="line">    &lt;ion-icon name="contact"&gt;&lt;/ion-icon&gt;</div><div class="line">    &lt;ion-list&gt;</div><div class="line">      &lt;ion-item&gt;</div><div class="line">        &lt;ion-icon name="person" item-left&gt;&lt;/ion-icon&gt;</div><div class="line">        &lt;ion-label stacked&gt;Email:&lt;/ion-label&gt;</div><div class="line">        &lt;ion-input formControlName="email" type="text" placeholder="Email"&gt;&lt;/ion-input&gt;</div><div class="line">      &lt;/ion-item&gt;</div><div class="line">    &lt;/ion-list&gt;</div><div class="line">    &lt;div padding&gt;</div><div class="line">      &lt;button ion-button block type="submit" [disabled]="!myForm.valid"&gt;Register&lt;/button&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/form&gt;</div><div class="line">&lt;/ion-content&gt;</div></pre></td></tr></table></figure>
+<h3 id="reset-password-ts"><a href="#reset-password-ts" class="headerlink" title="reset-password.ts"></a>reset-password.ts</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; NavController &#125; <span class="keyword">from</span> <span class="string">'ionic-angular'</span>;</div><div class="line"><span class="keyword">import</span> &#123; Auth, IDetailedError &#125; <span class="keyword">from</span> <span class="string">'@ionic/cloud-angular'</span>;</div><div class="line"><span class="keyword">import</span> &#123; FormBuilder, FormGroup, Validators &#125; <span class="keyword">from</span> <span class="string">'@angular/forms'</span>;</div><div class="line"><span class="keyword">import</span> &#123; LoginPage &#125; <span class="keyword">from</span> <span class="string">'../login/login'</span>;</div><div class="line"></div><div class="line"></div><div class="line">@Component(&#123;</div><div class="line">  <span class="attr">selector</span>: <span class="string">'page-reset-password'</span>,</div><div class="line">  <span class="attr">templateUrl</span>: <span class="string">'reset-password.html'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ResetPasswordPage</span> </span>&#123;</div><div class="line">  myForm: FormGroup;</div><div class="line"></div><div class="line">  <span class="keyword">constructor</span>(public navCtrl: NavController,</div><div class="line">  public formBuilder: FormBuilder,</div><div class="line">  public auth: Auth, ) &#123;</div><div class="line">    <span class="keyword">this</span>.myForm = <span class="keyword">this</span>.formBuilder.group(&#123;</div><div class="line">      <span class="attr">email</span>: [<span class="string">''</span>, Validators.required]</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  ionViewDidLoad() &#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Hello ResetPasswordPage Page'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  private ResetPassword()&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Email:"</span> + <span class="keyword">this</span>.myForm.controls[<span class="string">'email'</span>].value);</div><div class="line">    <span class="keyword">this</span>.auth.requestPasswordReset(<span class="keyword">this</span>.myForm.controls[<span class="string">'email'</span>].value).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="comment">// `this.user` is now registered</span></div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'Request Sent'</span>);</div><div class="line">      <span class="keyword">this</span>.navCtrl.push(LoginPage);</div><div class="line">    &#125;, (err: IDetailedError&lt;string[]&gt;) =&gt; &#123;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> e <span class="keyword">of</span> err.details) &#123;</div><div class="line">        <span class="keyword">switch</span> (e) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="string">'required_email'</span>: </div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'Missing email field.'</span>);</div><div class="line">        <span class="keyword">case</span> <span class="string">'required_password'</span>: </div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'Missing password field'</span>);</div><div class="line">        <span class="keyword">break</span>; </div><div class="line">        <span class="keyword">case</span> <span class="string">'conflict_email'</span>: </div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'A user has already signed up with the supplied email'</span>);</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">'conflict_username'</span>: </div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'A user has already signed up with the supplied username'</span>);</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">'invalid_email'</span>: </div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'The email did not pass validation.'</span>);</div><div class="line">        <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'Something unknow.'</span>);</div><div class="line">      &#125;     </div><div class="line">      &#125;</div><div class="line">    &#125;); </div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Ok, in this point you should to see something like this:</p>
+<p><a href="/launcher/demo101/">Demo</a>{:target=”_blank”}</p>
+<p><a href="https://github.com/StartupersAcademy/myFirstApp" target="_blank" rel="external">Repo</a>{:target=”_blank”}</p>
+<p>Ok, this is everything for now. In 6 or 7 days since received this in your email you going to receive the next lesson. but, meanwhile you can read the next links :)  </p>
+<p><a href="https://ionicframework.com/docs/v2/resources/forms/" target="_blank" rel="external">Forms</a>{:target=”_blank”}</p>
+<p>Please rate this <a href="https://carlosrojaso.typeform.com/to/Y07Lg9" target="_blank" rel="external">lesson here</a> and Help us to improve :)</p>
+<p>Keep coding…</p>
+<p>Carlos Rojas<br>@carlosrojas_o</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://www.carlosrojasblog.com/2017/01/03/Building-your-first-App-User-Authentication/" data-id="ciyvzlk9h0008x8v8x9435g65" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ionic2/">ionic2</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<ul id="article-nav" class="nav nav-pills nav-justified">
+  
+  <li role="presentation">
+    <a href="/2017/01/02/Building-your-first-App-Fundamentals/" id="article-nav-older" class="article-nav-link-wrap">
+      <i class="fa fa-chevron-left pull-left"></i>
+      <span class="article-nav-link-title">Building your first App: Fundamentals</span>
+    </a>
+  </li>
+  
+  
+  <li role="presentation">
+    <a href="/2017/01/04/Building-your-first-App-Objects/" id="article-nav-newer" class="article-nav-link-wrap">
+      <span class="article-nav-link-title">Building your first App: Objects</span>
+      <i class="fa fa-chevron-right pull-right"></i>
+    </a>
+  </li>
+  
+</ul>
+
+
+  
+</article>
+
+
+
+        </div>
+    </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2017 {} Carlos Rojas<br>
+    </div>
+  </div>
+</footer>
+
+  
+
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+
+<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script src="/js/script.js"></script>
+<script type="text/javascript">
+(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/2MLn06G3xMFaacqYzo4NxOFldSJFTjZXH9QRnuPy/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+</script>
+
+ 
+</body>
+</html>
