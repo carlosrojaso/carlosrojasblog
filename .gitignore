@@ -1,6 +1,6 @@
 node_modules
 public
-db.json
 .vscode
 .deploy_git
 .firebaserc
+db.json
