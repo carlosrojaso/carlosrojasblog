@@ -2,10 +2,7 @@
 title: Products
 date: 2017-07-23 20:10:02
 ---
-<h2>Starters</h2>
-Do you want to save some time building apps? I'm obsessed with <b>productivity</b> and frequently I build pieces of software that can help us to start quickly on a new project. 
-    <h3>Landing Pages</h3>
-    <p>Start your new project connected to Firebase Hosting and with a light CSS Framework ready.</p>
+<h2>Landing Pages</h2>
 <div class="container">
  <div class="row">
   <div class="col-6 col-md-6">
@@ -25,14 +22,11 @@ Do you want to save some time building apps? I'm obsessed with <b>productivity</
   <div class="row">
   <div class="col-12">
     <h3>Ionic 3</h3>
-    <p>Start your new 1B App project connected to Firebase Auth.</p>
   </div>
   </div>
-
 <div class="row">
  <div class="col-6 col-md-6">
 <h4>Firebase Auth Starter.</h4>
-
 <img src="https://firebasestorage.googleapis.com/v0/b/modular-source-808.appspot.com/o/images%2F1.png?alt=media&token=2b35bd31-a600-4e07-b6d4-ed59cde6e63e" class="img-thumbnail" width="150"/>
 
 <blockquote>Start your ionic project with this template connected to Firebase Auth.</blockquote>
@@ -77,13 +71,7 @@ Do you want to save some time building apps? I'm obsessed with <b>productivity</
 
 <div class="row">
   <div class="col-12">
-    Are you looking for Ionic 1 Starters? <a href="https://gum.co/Ruuf" target="_blank">Buy here</a>
-  </div>
-  </div>
-<div class="row">
-  <div class="col-12">
     <h3>Books</h3>
-    I love reading and writing here some of my books hoping can be handy in your life.
   </div>
   </div>
 <div class="row">
