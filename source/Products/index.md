@@ -54,7 +54,7 @@ date: 2017-07-23 20:10:02
 
 <blockquote>Start your ionic project with this template connected to Firebase Storage.</blockquote>
 
-<div align="center"><a class="gumroad-button" href="https://gumroad.com/l/MhVRV" target="_blank" data-gumroad-single-product="true">Buy my product</a>
+<div align="center"><a class="gumroad-button" href="https://gum.co/TqQAa" target="_blank" data-gumroad-single-product="true">Buy my product</a>
 </div>
 </div>
 
@@ -65,7 +65,7 @@ date: 2017-07-23 20:10:02
 
 <blockquote>Start your ionic project with this template connected to Firebase Database.</blockquote>
 
-<div align="center"><a class="gumroad-button" href="https://gumroad.com/l/QYExO" target="_blank" data-gumroad-single-product="true">Buy my product</a></div>
+<div align="center"><a class="gumroad-button" href="https://gum.co/FRCfd" target="_blank" data-gumroad-single-product="true">Buy my product</a></div>
 </div>
 </div>
 
